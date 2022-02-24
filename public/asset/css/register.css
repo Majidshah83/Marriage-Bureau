@@ -1,0 +1,295 @@
+* {
+    font-family: "Dancing Script", cursive;
+    font-family: "Libre Baskerville", serif;
+    font-family: "Poppins", sans-serif;
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    transition: 0.2s linear;
+    text-transform: capitalize;
+}
+
+*::selection {
+    background: blue;
+    color: white;
+}
+
+
+header {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10000;
+    background: transparent;
+    padding: 1rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo {
+    font-size: 2rem;
+    font-weight: bolder;
+    color: rgb(5, 5, 5);
+    margin-top: 1rem;
+}
+
+header .navbar a {
+    color: rgb(5, 5, 5);
+    font-size: 1.1rem;
+    margin-left: 2rem;
+    text-decoration: none;
+}
+
+#menu-bar {
+    font-size: 3rem;
+    color: white;
+    border-radius: 0.5rem;
+    border: 0.1rem solid white;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.main {
+    background: white;
+    max-width: 1200px;
+    width: 100%;
+    padding: 25px 30px;
+    border-radius: 5px;
+}
+
+.main-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.main .title {
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.main form .user-details {
+    display: flex;
+    flex-wrap: wrap;
+}
+form .user-details .input-box {
+    margin: 20px 30px 20px 30px;
+    width: 260px;
+    height: 45px;
+}
+.user-details .input-box .details {
+    display: block;
+    font-weight: 420;
+    margin-bottom: 5px;
+}
+
+.user-details .input-box .input {
+    height: 35px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-size: 20px;
+    padding-left: 10px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+form .gender-details .gender-title {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#gender {
+    margin-top: 10px;
+}
+
+.user-details .input-box input [type="file"]::file-selector-button {
+    padding: 15px 40px;
+    border-radius: 50px;
+    border: none;
+    color: white;
+}
+
+.textarea {
+    height: 50px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-size: 20px;
+    padding-left: 10px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.textarea-2 {
+    height: 65px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-size: 20px;
+    padding-left: 10px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.btndiv {
+    display: flex;
+    justify-content: end;
+}
+
+.row-footer {
+    display: flex;
+    flex-wrap: wrap;
+}
+ul {
+    list-style: none;
+}
+
+.footer {
+    background-color: rgb(218, 204, 218);
+    padding: 70px 0;
+    padding: 2.5rem 1.5rem;
+}
+.container {
+    display: flex;
+    max-width: 100%;
+    background-color: rgb(221, 221, 221);
+    margin: auto;
+    justify-content: space-around;
+}
+
+.footer-col {
+    width: 25%;
+    padding: 0 15px;
+    text-align: center;
+    align-items: center;
+    /* justify-content: center; */
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-logo {
+    font-size: 1.7rem;
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+}
+
+.logo-p {
+    font-size: 0.9rem;
+    color: rgb(16, 5, 58);
+}
+
+.logo-p-2 {
+    font-size: 0.7rem;
+    color: rgb(16, 5, 58);
+}
+
+.footer-col h4 {
+    font-size: 20px;
+    color: black;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    position: relative;
+    font-weight: bolder;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+    display: block;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: var(--black);
+}
+
+.footer-col ul li a:hover {
+    padding-left: 15px;
+}
+.social-links a {
+    font-size: 16px;
+    margin: 7px;
+    color: rgb(16, 5, 58);
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    border: 0.1rem solid black;
+    color: var(--black);
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    background: none;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    border-color: rgb(3, 3, 3);
+    transition: 1s;
+}
+
+/* mmedia quries */
+
+@media (max-width: 768px) {
+    #menu-bar {
+        display: block;
+        color: black;
+        font-size: 20px;
+        padding: 0.2rem 0.5rem;
+    }
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: transparent;
+        padding: 1rem 0;
+        /* clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); */
+    }
+
+    header .navbar.nav-toggle {
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header .navbar a {
+        display: block;
+        background: white;
+        border-radius: 0.5rem;
+        color: var(--black);
+        margin: 1.5rem 0;
+        padding: 0.5rem 1rem;
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 750px) {
+    .textarea {
+        max-width: 500px;
+        height: 80px;
+    }
+
+    .textarea-2 {
+        max-width: 300px;
+    }
+}

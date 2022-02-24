@@ -1,0 +1,614 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Libre+Baskerville:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+:root {
+    --pink: #ee0548;
+    --black: #130f40;
+}
+* {
+    font-family: "Dancing Script", cursive;
+    font-family: "Libre Baskerville", serif;
+    font-family: "Poppins", sans-serif;
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    transition: 0.2s linear;
+    text-transform: capitalize;
+}
+
+*::selection {
+    background: blue;
+    color: white;
+}
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 6.5rem;
+    scroll-behavior: smooth;
+}
+
+section {
+    padding: 4rem 12%;
+}
+
+.heading {
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+.heading h1 {
+    font-size: 4rem;
+    color: rgb(0, 0, 0);
+    padding-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+header {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10000;
+    background: transparent;
+    padding: 1rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: rgb(5, 5, 5);
+    margin-top: 1rem;
+}
+
+header .navbar a {
+    color: rgb(5, 5, 5);
+    font-size: 4.5rem;
+    margin-left: 2rem;
+    text-decoration: none;
+}
+/*
+header .navbar a:hover {
+    color: var(--black);
+    padding: 5px;
+} */
+
+#menu-bar {
+    font-size: 3rem;
+    color: white;
+    border-radius: 0.5rem;
+    border: 0.1rem solid white;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.btn-header {
+    display: inline-block;
+    margin-top: 1rem;
+    border: 0.1rem solid black;
+    color: black;
+    font-size: 1.5rem;
+    padding: 0.6rem 1rem;
+    cursor: pointer;
+    background: none;
+}
+
+.btn-header:hover {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    border-color: rgb(3, 3, 3);
+    transition: 0.5s;
+}
+
+.home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    /* background: url(images/home-bg.jpg) no-repeat; */
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.home .content span {
+    font-size: 3rem;
+    /* color: var(--pink); */
+    color: white;
+}
+
+.home .content h3 {
+    font-size: 6rem;
+    /* color: var(--black); */
+    color: black;
+    width: 60rem;
+}
+
+.step-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.main-services-heading {
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+.main-services-heading h1 {
+    font-size: 4rem;
+    color: #fffafa;
+    padding-bottom: 1rem;
+    margin: 1rem;
+    text-transform: uppercase;
+}
+
+.step-container .step {
+    background: white;
+    margin: 1rem;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.9);
+    text-align: center;
+    flex: 1 1 30rem;
+}
+
+.step-container .step span {
+    font-size: 7rem;
+    color: var(--black);
+    font-weight: bolder;
+}
+
+.step-container .step h3 {
+    font-size: 7rem;
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+}
+
+.step-container .step p {
+    font-size: 1.5rem;
+    color: gray;
+    padding: 1rem;
+}
+
+.services .box-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.services .box-container .box {
+    /* flex: 1 1 30rem; */
+    margin: 1rem;
+    overflow: hidden;
+    position: relative;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.9);
+    height: 25rem;
+}
+
+.services .box-container .box img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.services .box-container .box .info {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 2px;
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    transform: scale(1.3);
+    opacity: 0;
+}
+
+.services .box-container .box:hover .info {
+    transform: scale(1);
+    opacity: 1;
+    cursor: pointer;
+}
+
+.services .box-container .box .info h3 {
+    font-size: 3rem;
+    color: black;
+}
+
+.services .box-container .box .info p {
+    font-size: 1.7rem;
+    color: gray;
+}
+
+.btn-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-div button {
+    border: 1px solid black;
+    padding: 10px 15px;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.btn-div button a {
+    color: #000;
+}
+
+.btn-div button:hover {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    border-color: rgb(3, 3, 3);
+    transition: 1s;
+}
+
+.btn-div button a:hover {
+    background-color: gray;
+    color: white;
+}
+
+.clients .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clients .row .divider {
+    padding: 0 1rem;
+}
+
+.clients .row .box-container .box .info {
+    padding: 2rem 0;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 2px;
+    height: 100%;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    text-align: center;
+    transform: scaleX(1.3);
+    opacity: 0;
+}
+
+.clients .row .box-container .box {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    width: auto;
+    height: auto;
+}
+
+.clients .row .box-container .box:hover .info {
+    transform: scale(1);
+    opacity: 1;
+    cursor: pointer;
+    padding: 20px;
+}
+
+.clients .row .box-container .box img {
+    height: 30rem;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    border: 2rem solid white;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.9);
+}
+
+.clients .row .box-container .box .info h3 {
+    font-size: 2.5rem;
+    color: rgb(14, 13, 13);
+}
+
+.clients .row .box-container .box .info p {
+    font-size: 1.7rem;
+    color: rgb(29, 28, 28);
+    padding: 1rem 0;
+    font-style: italic;
+}
+
+.clients .row .box-container .box .info p i {
+    color: var(--black);
+    padding: 0 0.5rem;
+}
+
+.team .box-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.team .box-container .box {
+    margin: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.9);
+    background: white;
+    padding: 4.7rem 2rem;
+    text-align: center;
+    background-size: cover;
+    flex: 1 1 30rem;
+}
+
+.team .box-container .box img {
+    border-radius: 50%;
+    object-fit: cover;
+    height: 15rem;
+    width: 15rem;
+    margin: 1rem;
+}
+
+.team .box-container .box h3 {
+    font-size: 2.5rem;
+    color: var(--black);
+    margin: 1rem;
+}
+
+.team .box-container .box span {
+    font-size: 2rem;
+    color: black;
+}
+
+.team .box-container .box p {
+    font-size: 1.7rem;
+    color: gray;
+}
+
+.team .box-container .box .share {
+    padding: 1rem;
+}
+
+.team .box-container .box .share a {
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;
+    color: black;
+    font-size: 2rem;
+}
+
+.contact form {
+    padding: 2rem;
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.9);
+    text-align: center;
+}
+
+.contact form .inputBox {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .inputBox input,
+.contact form textarea {
+    border: 0.2rem solid rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin: 1rem 0;
+    text-transform: none;
+    color: gray;
+}
+
+.contact form .inputBox input {
+    width: 49%;
+}
+
+.contact form textarea {
+    height: 15rem;
+    width: 100%;
+    resize: none;
+}
+
+.contact form .inputBox input::placeholder,
+.contact form textarea::placeholder {
+    text-transform: none;
+}
+
+.contact form .inputBox input:focus,
+.contact form textarea:focus {
+    border-color: rgb(2, 2, 2);
+}
+
+.row-footer {
+    display: flex;
+    flex-wrap: wrap;
+}
+ul {
+    list-style: none;
+}
+
+.footer {
+    background-color: rgb(218, 204, 218);
+    padding: 70px 0;
+    padding: 2.5rem 1.5rem;
+}
+.container {
+    display: flex;
+    max-width: 100%;
+    background-color: rgb(221, 221, 221);
+    margin: auto;
+    justify-content: space-around;
+}
+
+.footer-col {
+    width: 25%;
+    padding: 0 15px;
+    text-align: center;
+    align-items: center;
+    /* justify-content: center; */
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-logo {
+    font-size: 2.5rem;
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+}
+
+.logo-p {
+    font-size: 1.3rem;
+    color: rgb(16, 5, 58);
+}
+
+.logo-p-2 {
+    font-size: 1.1rem;
+    color: rgb(16, 5, 58);
+}
+
+.footer-col h4 {
+    font-size: 12px;
+    color: black;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    position: relative;
+    font-weight: bolder;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+    display: block;
+}
+
+.footer-col ul li a {
+    font-size: 10px;
+    text-transform: capitalize;
+    color: var(--black);
+}
+
+.footer-col ul li a:hover {
+    padding-left: 15px;
+}
+.social-links a {
+    font-size: 16px;
+    margin: 7px;
+    color: rgb(16, 5, 58);
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    border: 0.2rem solid var(--black);
+    color: var(--black);
+    font-size: 1.7rem;
+    padding: 0.7rem 2rem;
+    cursor: pointer;
+    background: none;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    border-color: rgb(3, 3, 3);
+    transition: 1s;
+}
+
+/* Media Quries */
+
+@media (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 990px) {
+    header {
+        padding: 2rem 4%;
+    }
+
+    section {
+        padding: 3rem 4%;
+    }
+}
+
+@media (max-width: 768px) {
+    #menu-bar {
+        display: block;
+        color: black;
+    }
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: transparent;
+        padding: 1rem 0;
+        /* clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); */
+    }
+
+    header .navbar.nav-toggle {
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header .navbar a {
+        display: block;
+        background: white;
+        border-radius: 0.5rem;
+        color: var(--black);
+        margin: 1.5rem 0;
+        padding: 1rem 2rem;
+        font-size: 2.5rem;
+    }
+
+    .home {
+        justify-content: center;
+        background-position: left;
+    }
+    .home .content {
+        text-align: center;
+    }
+    .home .content span {
+        font-size: 2rem;
+    }
+    .home .content h3 {
+        font-size: 4rem;
+        width: auto;
+    }
+
+    .clients .row {
+        flex-flow: column;
+    }
+
+    .clients .row .divider {
+        display: none;
+    }
+
+    /* .clients .row .box-container:last-child .box {
+        display: flex;
+        flex-flow: column-reverse;
+    } */
+
+    .contact form .inputBox input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+}
