@@ -27,10 +27,8 @@ Route::get('extra-serveice', [App\Http\Controllers\ExtraServiceController::class
 Route::get('profile', [App\Http\Controllers\ProfileController::class, 'index'])->name('profile');
 Route::get('create', [App\Http\Controllers\RegisterController::class, 'index'])->name('create');
 Route::get('wedding', [App\Http\Controllers\WeddingController::class, 'index'])->name('wedding');
-Auth::routes();
-
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
+Route::post('user-profile-insert', [App\Http\Controllers\RegisterController::class, 'store'])->name('user-profile-insert');
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
