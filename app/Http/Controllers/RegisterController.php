@@ -5,6 +5,8 @@ use Illuminate\Http\Request;
 use App\Models\UserProfile;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\SendMail;
 class RegisterController extends Controller
 {
     public function index()
@@ -13,6 +15,11 @@ class RegisterController extends Controller
     }
     public function store(Request $request)
     {
+         $data = array(
+            'name'      =>  $request->name,
+
+        );
+ Mail::to('shahmajid508@gmail.com')->send(new SendMail($data));
 
         $profile=new UserProfile;
          $profile->name=$request->name;
@@ -47,8 +54,10 @@ class RegisterController extends Controller
         $profile->image=$filename;
 
     }
+
+
        $profile->save();
-       return redirect('create')->with('message', 'You have successfully Created!');
+       return back()->with('message', 'Thanks for contacting us!');
 
 
     }

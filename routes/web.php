@@ -6,6 +6,7 @@ use App\Http\Controllers\ExtraServiceController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\WeddingController;
+use App\Http\Controllers\DashbordController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,6 +30,8 @@ Route::get('create', [App\Http\Controllers\RegisterController::class, 'index'])-
 Route::get('wedding', [App\Http\Controllers\WeddingController::class, 'index'])->name('wedding');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::post('user-profile-insert', [App\Http\Controllers\RegisterController::class, 'store'])->name('user-profile-insert');
+Route::get('dashboard', [App\Http\Controllers\DashbordController::class, 'index'])->name('dashboard');
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -25,7 +25,7 @@
                     <span class="details">
                         Gender
                     </span>
-                    <input type="radio" name="gender" id="gender" value="female" required>
+                    <input type="radio" name="gender" id="gender" value="male" required>
                     <label for="gender">Male</label>
                     <input type="radio" name="gender" id="gender" value="female">
                     <label for="gender">Female</label>
