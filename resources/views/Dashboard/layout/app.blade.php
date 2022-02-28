@@ -64,40 +64,23 @@
 
                         <li class="nav-item">
                             <a href="" class="nav-link">
-                                <i class="nav-icon fas fa-table"></i>
+                                <i class="nav-icon fas fa-user"></i>
                                 <p>
-                                    Product &nbsp &nbsp &nbsp
+                                    Customer Profile &nbsp &nbsp &nbsp
                                     <i class="fas fa-angle-left right"></i>
                                 </p>
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="/product" class="nav-link">
+                                    <a href="customer-list" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Product List</p>
+                                        <p>Customers List</p>
                                     </a>
                                 </li>
 
                             </ul>
                         </li>
-                        <li class="nav-item">
-                            <a href="" class="nav-link">
-                                <i class="nav-icon fas fa-table"></i>
-                                <p>
-                                    Categorie &nbsp &nbsp &nbsp
-                                    <i class="fas fa-angle-left right"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="categorie_list" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Categories List</p>
-                                    </a>
-                                </li>
 
-                            </ul>
-                        </li>
                     </ul>
 
                 </nav>

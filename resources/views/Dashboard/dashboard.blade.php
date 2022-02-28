@@ -1,1 +1,6 @@
-<p>Hi, This is {{ $data['name'] }}</p>
+@extends('Dashboard.layout.master')
+@section('title', 'Dashboard')
+@section('content')
+<section class="content">
+
+    @endsection

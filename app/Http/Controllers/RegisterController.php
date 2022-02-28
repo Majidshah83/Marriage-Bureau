@@ -23,6 +23,7 @@ class RegisterController extends Controller
 
         $profile=new UserProfile;
          $profile->name=$request->name;
+         $profile->marital_status=$request->marital_status;
          $profile->gender=$request->gender;
          $profile->date_of_birth=$request->date_of_birth ;
           $profile->phone_number=$request->phone_number;

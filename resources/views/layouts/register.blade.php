@@ -30,6 +30,7 @@
                     <input type="radio" name="gender" id="gender" value="female">
                     <label for="gender">Female</label>
                 </div>
+
                 <div class="input-box">
                     <span class="details">
                         Date of birth
@@ -123,6 +124,16 @@
                     </span>
                     <input type="text" class="input" name="university_college" required>
                 </div>
+                <div class=" input-box">
+                    <span class="details">
+                        Marital Status
+                    </span>
+                    <input type="radio" name="marital_status" id="status" value="Single" required>
+                    <label for="status">Single</label>
+                    <input type="radio" name="marital_status" id="status" value="Married">
+                    <label for="status">Married</label>
+                </div>
+
             </div>
 
             <br>
