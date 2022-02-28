@@ -50,7 +50,7 @@
                                 <a href="{{ URL('/customer-profile/'.$customer->id )}}">View</a>
                             </td>
                             <td><input type="checkbox" data-id="{{$customer->id}}" class="toggle-class"
-                                    data-toggle="toggle" data-style="slow" data-on="Disabled" data-off="Enabled"
+                                    data-toggle="toggle" data-style="slow" data-on="Enabled" data-off="Disabled"
                                     {{$customer->satatus==true ? 'checked':''}}></td>
 
                         </tr>

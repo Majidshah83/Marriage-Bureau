@@ -7,6 +7,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\WeddingController;
 use App\Http\Controllers\DashbordController;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,6 +35,10 @@ Route::get('dashboard', [App\Http\Controllers\DashbordController::class, 'index'
 Route::get('customer-list', [App\Http\Controllers\DashbordController::class, 'fetechcustomer'])->name('customer-list');
 Route::get('customer-profile/{id}', [App\Http\Controllers\DashbordController::class, 'showProfile'])->name('customer-profile');
 Route::get('customer-list/changeStatus', [App\Http\Controllers\DashbordController::class, 'changeSatatus'])->name('customer-profile');
+Route::get('customer-profile-userside/{id}', [App\Http\Controllers\ExternalWeddingController::class, 'showProfile'])->name('customer-profile-userside');
+Route::post('addcontact', [App\Http\Controllers\ContactController::class, 'store'])->name('addcontact');
+
+
 
 
 Auth::routes();

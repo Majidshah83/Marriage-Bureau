@@ -165,7 +165,7 @@
 
         </div>
 
-      <!--   <img src="{{asset('public/images/divider.png')}}" alt="" class="divider"> -->
+        <!--   <img src="{{asset('public/images/divider.png')}}" alt="" class="divider"> -->
 
         <div class="box-container">
             <div class="box">
@@ -296,18 +296,30 @@
         <h1>Contact</h1>
         <img src="{{asset('public/images/header-img.png')}}" alt="">
     </div>
+    @if(count($errors)>0)
+    @foreach ($errors->all() as $errors)
+    <p class="alert" style=" background-color: red; color: white; margin-right: 73%; font-size: 20px; ">
+        {{$errors}}</p>
+    @endforeach
+    @endif
+    @if(session()->has('message'))
+    <div class="alert" style="background-color: red;color: white;font-size: 20px;margin-right: 56%;">
+        {{ session()->get('message') }}
+    </div>
+    @endif
+    <form action="{{url('addcontact')}}" method="post">
+        @csrf
+        <div class="inputBox">
+            <input type="text" placeholder="Your Name" name="name" required>
+            <input type="email" placeholder="Your Email" name="email" required>
+        </div>
+        <div class="inputBox">
+            <input type="number" placeholder="Your Number" name="phone_number" required>
+            <input type="text" placeholder="Your Adress" name="adress" required>
+        </div>
+        <textarea placeholder="Say Something" name="deatil" cols="30" rows="10" required></textarea>
+        <button type="submit" class="btn btn-primary">Send massage</button>
 
-    <form action="">
-        <div class="inputBox">
-            <input type="text" placeholder="Your Name">
-            <input type="email" placeholder="Your Email">
-        </div>
-        <div class="inputBox">
-            <input type="number" placeholder="Your Number">
-            <input type="text" placeholder="Your Adress">
-        </div>
-        <textarea placeholder="Say Something" name="" cols="30" rows="10"></textarea>
-        <input type="submit" value="send massage" class="btn">
     </form>
 
 </section>
