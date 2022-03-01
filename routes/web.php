@@ -31,7 +31,7 @@ Route::get('create', [App\Http\Controllers\RegisterController::class, 'index'])-
 Route::get('wedding', [App\Http\Controllers\WeddingController::class, 'index'])->name('wedding');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::post('user-profile-insert', [App\Http\Controllers\RegisterController::class, 'store'])->name('user-profile-insert');
-Route::get('dashboard', [App\Http\Controllers\DashbordController::class, 'index'])->name('dashboard');
+Route::get('dashboard', [App\Http\Controllers\DashbordController::class, 'index'])->name('dashboard')->middleware('auth');
 Route::get('customer-list', [App\Http\Controllers\DashbordController::class, 'fetechcustomer'])->name('customer-list');
 Route::get('customer-profile/{id}', [App\Http\Controllers\DashbordController::class, 'showProfile'])->name('customer-profile');
 Route::get('customer-list/changeStatus', [App\Http\Controllers\DashbordController::class, 'changeSatatus'])->name('customer-profile');

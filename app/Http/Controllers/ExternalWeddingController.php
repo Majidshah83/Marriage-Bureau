@@ -8,10 +8,7 @@ class ExternalWeddingController extends Controller
 {
     public function index()
     {
-         $userProfile=UserProfile::paginate(9);
-
-
-
+         $userProfile=UserProfile::where('satatus',1)->paginate(9);
         return view('layouts.externalwedding',compact('userProfile'));
     }
     public function showProfile($id)
@@ -19,4 +16,5 @@ class ExternalWeddingController extends Controller
         $customerProfile=UserProfile::where('id',$id)->first();
         return view('layouts.profile',compact('customerProfile'));
     }
+
 }

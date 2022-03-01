@@ -3,22 +3,23 @@
 namespace App\Mail;
 
 use Illuminate\Bus\Queueable;
+use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
-use Illuminate\Contracts\Queue\ShouldQueue;
 
-class SendMail extends Mailable
+class AdminMail extends Mailable
 {
     use Queueable, SerializesModels;
-    public $data;
+
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($data)
+     public $admindata;
+    public function __construct($admindata)
     {
-        $this->data = $data;
+         $this->admindata = $admindata;
 
     }
 
@@ -30,8 +31,6 @@ class SendMail extends Mailable
     public function build()
     {
 
-        return $this->from($this->data['email'])->subject('User Send You Request ')->view('Dashboard.dashboard')->with('data', $this->data);
+         return $this->from($this->admindata['email'])->subject('helo nabeel')->view('Dashboard.dashboard')->with('admindata',$this->admindata);
     }
 }
-
-?>

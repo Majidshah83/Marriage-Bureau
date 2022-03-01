@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Contact;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\SendMail;
+use App\Mail\AdminMail;
 class ContactController extends Controller
 {
     //
@@ -17,6 +20,12 @@ class ContactController extends Controller
         'deatil'=>'required',
 
 ]);
+$data = array(
+            'email'      =>  $request->email,
+
+        );
+
+
        $contact=new Contact;
        $contact->name=$request->name;
        $contact->email=$request->email;
@@ -24,6 +33,11 @@ class ContactController extends Controller
        $contact->adress=$request->adress;
        $contact->deatil=$request->deatil;
       $contact->save();
+       Mail::to('majidcodify@gmail.com')->send(new SendMail($data));
+        // $admindata=array(
+        //     'email'=>'alishah143083@gmail.com',
+        // );
+        // Mail::to($request->email)->send(new AdminMail($admindata));
       return redirect()->back()->with('message', 'Message Send Successfully');
 
 
